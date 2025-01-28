@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-primary text-white font-semibold rounded-lg 
+           transition-all duration-300 hover:bg-secondary 
+           focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-16;
+  }
+
+  .hero-gradient {
+    @apply relative;
+    background: linear-gradient(-45deg, #2563eb15, #1e40af15, #3b82f615, #60a5fa15);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+
+  .service-card {
+    @apply p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300 text-center;
+  }
+
+  .benefit-card {
+    @apply p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300 text-center;
+  }
+
+  .case-card {
+    @apply p-6 rounded-xl bg-white shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  .form-input {
+    @apply w-full rounded-lg border-gray-300 shadow-sm focus:border-primary focus:ring-primary;
+  }
+
+  .social-link {
+    @apply text-gray-600 hover:text-primary transition-colors;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
